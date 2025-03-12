@@ -1,0 +1,73 @@
+.header {
+  background-color: #495780;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.container .options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.container .logo {
+  cursor: pointer;
+}
+
+.container .logo i {
+  font-size: 35px;
+}
+
+.container .username, .logout_btn {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.container .username i {
+  font-size: 25px;
+}
+
+.container .logout_btn {
+  border: none;
+  outline: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.container .logout_btn p {
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.container .logout_btn i {
+  font-size: 25px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.container .logout_btn:hover {
+  color: #e74c3c; 
+  transform: scale(1.05); 
+}
+
+.container .logout_btn:hover p,
+.container .logout_btn:hover i {
+  color: #e74c3c; 
+}
+
+.container .logout_btn:active {
+  transform: scale(0.95); 
+}

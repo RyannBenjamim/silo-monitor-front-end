@@ -29,7 +29,7 @@ const Login = () => {
         token: user.data.data.token
       }));
 
-      navigate("/home");
+      navigate("/home")
     } catch (error) {
       setError(error.response.data.error);
     } finally {

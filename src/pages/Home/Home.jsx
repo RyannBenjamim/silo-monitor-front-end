@@ -1,6 +1,7 @@
 import styles from "./Home.module.css"
 import axios from "axios"
 import Loading from "../../components/Loading"
+import Header from "../../components/Header"
 import { useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
 
@@ -10,13 +11,13 @@ const Home = () => {
 
   const getUser = async () => {
     try {
-      const storedUser = localStorage.getItem("stored_user");
+      const storedUser = localStorage.getItem("stored_user")
       if (!storedUser) {
         navigate("/")
-        return;
+        return
       }
 
-      const { id, token } = JSON.parse(storedUser); 
+      const { id, token } = JSON.parse(storedUser) 
       const { data } = await axios.get(`https://silo-monitor-api.vercel.app/users/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -24,18 +25,13 @@ const Home = () => {
       });
 
       if (!data) {
-        navigate("/");
+        navigate("/")
       } else {
-        setUser(data.data);
+        setUser(data.data)
       }
     } catch (error) {
       navigate("/")
     }
-  }
-
-  const logout = () => {
-    localStorage.removeItem("stored_user")
-    navigate("/")
   }
 
   useEffect(() => {
@@ -46,10 +42,10 @@ const Home = () => {
     <div className={styles.container}>
       {user ? (
         <>
-          <h1>Seja bem-vindo {user.username}</h1>
-          <button className={styles.logout_btn} onClick={logout}>Sair</button>
+          <Header height_size="8vh" username={user.username} />
+          <main></main>
         </>
-      ) : ( <Loading /> )}
+      ) : ( <Loading size="60px" color="#495780" /> )}
     </div>
   )
 }

@@ -1,13 +1,17 @@
 .container {
   width: 100%;
   height: 100vh;
-  background-color: #495780;
+  background-color: #ffffff;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+}
+
+.container main {
+  width: 70%;
+  min-height: 92vh;
 }
 
 .logout_btn {
