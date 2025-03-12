@@ -1,5 +1,6 @@
 import styles from "./Login.module.css"
 import ErrorMessage from "../../components/ErrorMessage"
+import Loading from "../../components/Loading"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
@@ -7,12 +8,14 @@ import axios from "axios"
 const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
 
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
 
     try {
       const user = await axios.post("https://silo-monitor-api.vercel.app/users/login", {
@@ -29,19 +32,18 @@ const Login = () => {
       navigate("/home");
     } catch (error) {
       setError(error.response.data.error);
+    } finally {
+      setIsLoading(false)
     }
   }
 
-  const hasToken = () => {
-    const token = localStorage.getItem("stored_user")
-
-    if (!token) return false
-
-    return true
+  const hasStoredUser = () => {
+    const stored_user = localStorage.getItem("stored_user")
+    return !!stored_user
   }
 
   useEffect(() => {
-    const isLogged = hasToken()
+    const isLogged = hasStoredUser()
     
     if (isLogged) {
       navigate("/home")
@@ -68,7 +70,7 @@ const Login = () => {
 
           <ErrorMessage text={error} />
 
-          <button className={styles.login_btn}>Entrar</button>
+          <button className={styles.login_btn}>{isLoading ? <Loading size={"20px"} /> : "Entrar"}</button>
         </form>
 
         <p className={styles.credits}>empresa &reg;</p>

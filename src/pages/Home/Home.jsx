@@ -1,5 +1,6 @@
 import styles from "./Home.module.css"
 import axios from "axios"
+import Loading from "../../components/Loading"
 import { useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
 
@@ -43,10 +44,14 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Seja bem-vindo {user ? user.username : "Carregando..."}</h1>
-      <button className={styles.logout_btn} onClick={logout}>Sair</button>
+      {user ? (
+        <>
+          <h1>Seja bem-vindo {user.username}</h1>
+          <button className={styles.logout_btn} onClick={logout}>Sair</button>
+        </>
+      ) : ( <Loading /> )}
     </div>
   )
 }
 
-export default Home;
+export default Home
