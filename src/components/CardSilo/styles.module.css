@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  flex: 1 1 300px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: fit-content;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.temperature, .humidity, .status {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555555;
+}
+
+.status span {
+  color: #333;
+}
+
+.last_update {
+  font-size: 0.9rem;
+  color: #777;
+}

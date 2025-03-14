@@ -1,0 +1,48 @@
+.general_container {
+  width: 30%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #005C85;
+  padding: 20px;
+}
+
+.card_geral_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff; 
+  text-align: center;
+  border-bottom: 1px solid #f4f4f4; 
+  padding-bottom: 5px;
+}
+
+.system_info_geral {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.label_geral {
+  font-weight: bold;
+  color: #d3d8ef; 
+}
+
+.value_geral {
+  font-size: 1rem;
+  color: #ffffff; 
+  margin-left: 5px;
+}
+
+.last_update_geral {
+  font-size: 0.9rem;
+  color: #d3d8ef; 
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 1500px) {
+  .general_container {
+    width: 100%;
+  }
+}

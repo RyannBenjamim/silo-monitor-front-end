@@ -10,31 +10,36 @@
 }
 
 .container main {
+  background-color: #F1F3F6;
   width: 70%;
+  margin-top: 10px;
+  border-radius: 8px;
   min-height: 92vh;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
 }
 
-.logout_btn {
-  width: 400px;
-  background-color: #ffffff;
-  color: #495780;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  padding: 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+.container main .silos_container {
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
 }
 
-.logout_btn:hover {
-  background-color: #dad3d3;
-  box-shadow: 4px 6px 12px rgba(15, 15, 15, 0.3);
-  transform: translateY(-2px);
+@media (max-width: 1500px) {
+  .container main {
+    flex-direction: column;
+  }
+
+  .container main .silos_container {
+    width: 100%;
+  }  
 }
 
-.logout_btn:active {
-  transform: translateY(1px);
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+@media (max-width: 700px) {
+  .container main {
+    width: 100%;
+  }
 }

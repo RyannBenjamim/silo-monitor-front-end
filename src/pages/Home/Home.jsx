@@ -2,6 +2,8 @@ import styles from "./Home.module.css"
 import axios from "axios"
 import Loading from "../../components/Loading"
 import Header from "../../components/Header"
+import CardSilo from "../../components/CardSilo"
+import GeneralCard from "../../components/GeneralCard"
 import { useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
 
@@ -43,9 +45,21 @@ const Home = () => {
       {user ? (
         <>
           <Header height_size="8vh" username={user.username} />
-          <main></main>
+          <main>
+
+            <div className={styles.silos_container}>
+              <CardSilo />
+              <CardSilo />
+              <CardSilo />
+              <CardSilo />
+              <CardSilo />
+            </div>
+
+            <GeneralCard />
+
+          </main>
         </>
-      ) : ( <Loading size="60px" color="#495780" /> )}
+      ) : ( <Loading size="60px" color="#005C85" /> )}
     </div>
   )
 }

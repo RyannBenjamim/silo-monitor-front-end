@@ -13,7 +13,7 @@
 }
 
 .bg_right {
-  background-color: #495780;
+  background-color: #005C85;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23606d93' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   width: 50%;
   height: 100vh;
@@ -24,30 +24,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.logo i {
-  color: #495780;
-  font-size: 80px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-.logo p {
-  color: #495780;
-  position: absolute;
-  right: 0px;
-  bottom: -6px;
-  font-size: 20px;
 }
 
 .login_title {
@@ -96,7 +72,7 @@
 }
 
 .login_btn {
-  background-color: #495780;
+  background-color: #005C85;
   color: #ffffff;
   font-size: 16px;
   border: none;
@@ -109,13 +85,13 @@
 }
 
 .login_btn:hover {
-  background-color: #3b4968;
+  background-color: #004D70; /* Tom intermediário */
   box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
 
 .login_btn:active {
-  background-color: #2e3a54;
+  background-color: #003F5C; /* Tom mais escuro */
   transform: translateY(1px);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
 }
