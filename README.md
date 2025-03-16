@@ -1,12 +1,67 @@
-# React + Vite + Teste
+# Sistema de Gerenciamento de Temperatura e Umidade em Silos - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém o frontend desenvolvido em React para a API de Gerenciamento de Temperatura e Umidade em Silos. A aplicação permite o monitoramento e controle desses dados, oferecendo autenticação, autorização e gerenciamento de usuários e silos.
 
-Currently, two official plugins are available:
+## 🖥️ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📌 **Login e Autenticação**
+- 📊 **Monitoramento de Temperatura e Umidade**
+- 🏠 **Home com versões diferenciadas para usuário padrão e administrador**
+- 🛠️ **Gerenciamento de usuários e silos (somente para administradores)**
 
-## Expanding the ESLint configuration
+## 📸 Imagens das Telas
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Tela de Login
+![screencapture-silomonitor-vercel-app-2025-03-16-19_46_07](https://github.com/user-attachments/assets/10eaab00-609a-43be-aa94-b1ed37beee6d)
+
+### Home (Usuário Padrão)
+![screencapture-silomonitor-vercel-app-home-2025-03-16-19_47_54](https://github.com/user-attachments/assets/7163d29b-e0c5-4357-81b9-29fb8e3fa5d7)
+
+### Painel de Administração
+![screencapture-silomonitor-vercel-app-home-2025-03-16-19_47_01](https://github.com/user-attachments/assets/4883f6df-fd54-492c-ba24-3c709db10f17)
+
+## 🚀 Tecnologias Utilizadas
+
+- React.js
+- React Router
+- CSS Modules
+- Axios (para comunicação com a API)
+
+## 📦 Instalação e Execução
+
+Clone este repositório:
+
+```sh
+git clone https://github.com/RyannBenjamim/silo-monitor-front-end
+```
+
+Instale as dependências:
+
+```sh
+npm install
+```
+
+Inicie o projeto:
+
+```sh
+npm run dev
+```
+
+## 📌 Configuração da API
+
+Certifique-se de configurar a URL da API corretamente no código. Se houver um arquivo `.env`, defina a variável:
+
+```sh
+REACT_APP_API_URL=http://localhost:5000
+```
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Sinta-se à vontade para contribuir! 🚀
+
+## Contato
+
+Se você tiver alguma dúvida ou sugestão sobre este projeto, sinta-se à vontade para entrar em contato com Ryan Costa Benjamim via [meu site](https://ryancostaportfolio.netlify.app/)
+
+Espero que este README ajude você a entender melhor o projeto.
+
