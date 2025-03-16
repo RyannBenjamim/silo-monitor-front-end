@@ -6,18 +6,22 @@ const isAuthenticated = () => {
   return localStorage.getItem("stored_user") !== null; 
 };
 
-const ProtectedRoute = ({ element }) => {
+const ProtectedHomeRoute = ({ element }) => {
   return isAuthenticated() ? element : <Navigate to="/" replace />;
+};
+
+const ProtectedLoginRoute = ({ element }) => {
+  return isAuthenticated() ? <Navigate to="/home" replace /> : element;
 };
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
+    element: <ProtectedLoginRoute element={<Login />} />,
   },
   {
     path: "/home",
-    element: <ProtectedRoute element={<Home />} />,
+    element: <ProtectedHomeRoute element={<Home />} />,
   },
 ]);
 

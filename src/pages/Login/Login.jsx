@@ -38,19 +38,6 @@ const Login = () => {
     }
   }
 
-  const hasStoredUser = () => {
-    const stored_user = localStorage.getItem("stored_user")
-    return !!stored_user
-  }
-
-  useEffect(() => {
-    const isLogged = hasStoredUser()
-    
-    if (isLogged) {
-      navigate("/home")
-    }
-  }, [])
-
   return (
     <div className={styles.container}>
 
