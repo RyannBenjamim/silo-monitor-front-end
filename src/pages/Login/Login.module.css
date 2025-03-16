@@ -61,4 +61,8 @@
   .login_card {
     width: 90%;
   }
+
+  .login_subtitle {
+    font-size: 0.9rem;
+  }
 }

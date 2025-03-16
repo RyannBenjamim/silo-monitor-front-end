@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 10px;
   flex: 1 1 400px;
-  background-color: #2E3238; /* Fundo escuro */
+  background-color: #2E3238; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   padding: 20px;
@@ -21,13 +21,13 @@
 .title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #E0E0E0; /* Texto claro */
+  color: #E0E0E0; 
 }
 
 .temperature, .humidity {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #B0B0B0; /* Cinza claro */
+  color: #B0B0B0; 
 }
 
 .normal {
@@ -35,15 +35,59 @@
 }
 
 .warning {
-  color: #FFC107; /* Amarelo */
+  color: #FFC107; 
 }
 
 .danger {
-  color: #F44336; /* Vermelho */
+  color: #F44336; 
 }
 
 .silo_id, .last_update {
   font-size: 0.9rem;
-  color: #999999; /* Cinza médio */
+  color: #999999; 
 }
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .temperature, .humidity {
+    font-size: 1rem;
+  }
+
+  .silo_id, .last_update {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 12px;
+    margin-top: 10px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .temperature, .humidity {
+    font-size: 0.95rem;
+  }
+
+  .silo_id, .last_update {
+    font-size: 0.8rem;
+  }
+
+  .card:hover {
+    transform: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
 

@@ -6,3 +6,24 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  footer {
+    height: 100px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    height: 80px;
+    padding: 10px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}

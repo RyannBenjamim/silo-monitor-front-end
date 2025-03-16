@@ -42,4 +42,9 @@
   .standard_main {
     width: 100%;
   }
+
+  .standard_main .main_title {
+    font-size: 0.9rem;
+    margin-left: 3px;
+  }
 }

@@ -81,3 +81,59 @@
   transform: translateY(1px);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 768px) {
+  .user_card {
+    flex: 1 1 100%;
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .silos_quant {
+    font-size: 1rem;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .create_silo, .delete_user {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user_card {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .id {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .silos_quant {
+    font-size: 0.9rem;
+  }
+
+  .btns {
+    gap: 5px;
+  }
+
+  .create_silo, .delete_user {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+

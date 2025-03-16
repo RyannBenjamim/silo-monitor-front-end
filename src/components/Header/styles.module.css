@@ -63,8 +63,29 @@
 
 @media (max-width: 700px) {
   .container {
-    width: 100%;
-    padding: 0px 20px;
+    width: 90%;
+    gap: 10px;
+  }
+
+  .options {
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .username, .logout_btn {
+    font-size: 13px;
+  }
+
+  .username i {
+    font-size: 16px;
+  }
+
+  .logout_btn i {
+    font-size: 16px;
   }
 }
+
 
