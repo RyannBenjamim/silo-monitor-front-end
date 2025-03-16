@@ -1,0 +1,83 @@
+.user_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  flex: 1 1 400px;
+  background-color: #3A3F47; 
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  height: fit-content;
+  margin-top: 20px;
+}
+
+.id {
+  font-size: 0.9rem;
+  color: #B0B0B0; 
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #E0E0E0; 
+}
+
+.silos_quant {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #CCCCCC; 
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+.create_silo, .delete_user {
+  width: 50%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.create_silo {
+  background-color: #4A8F4A; 
+  font-size: 16px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.create_silo:hover {
+  background-color: #3D7A3D; 
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.create_silo:active {
+  background-color: #315F31; 
+  transform: translateY(1px);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.delete_user {
+  background-color: #B2433F; 
+  font-size: 16px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.delete_user:hover {
+  background-color: #9E3A36; 
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.delete_user:active {
+  background-color: #872F2C; 
+  transform: translateY(1px);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}

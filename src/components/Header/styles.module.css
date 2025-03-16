@@ -1,73 +1,63 @@
 .header {
-  background-color: #005C85;
+  background-color: #181818;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 12px 0;
 }
 
 .container {
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  width: 70%;
-  height: 100%;
-  margin: 0 auto;
 }
 
-.container .options {
+.logo {
+  font-size: 28px;
+  color: #CCCCCC; 
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.options {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
-  list-style: none;
+  gap: 20px;
 }
 
-.container .logo {
-  cursor: pointer;
-}
-
-.container .logo i {
-  font-size: 35px;
-}
-
-.container .username, .logout_btn {
-  background-color: transparent;
+.username {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.container .username i {
-  font-size: 25px;
-}
-
-.container .logout_btn {
-  border: none;
-  outline: none;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.container .logout_btn p {
+  gap: 8px;
+  color: #BBBBBB; 
   font-size: 16px;
-  transition: color 0.3s ease;
 }
 
-.container .logout_btn i {
-  font-size: 25px;
-  transition: color 0.3s ease, transform 0.2s ease;
+.username i {
+  font-size: 20px;
 }
 
-.container .logout_btn:hover {
-  color: #e74c3c; 
-  transform: scale(1.05); 
+.logout_btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #BBBBBB;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
-.container .logout_btn:hover p,
-.container .logout_btn:hover i {
-  color: #e74c3c; 
+.logout_btn i {
+  font-size: 18px;
 }
 
-.container .logout_btn:active {
-  transform: scale(0.95); 
+.logout_btn:hover {
+  color: #FF7070; 
+  opacity: 0.85;
 }
+

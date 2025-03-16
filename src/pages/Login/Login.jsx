@@ -1,9 +1,10 @@
 import styles from "./Login.module.css"
-import ErrorMessage from "../../components/ErrorMessage"
-import Loading from "../../components/Loading"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
+import Message from "../../components/Message"
+import Input from "../../components/Input"
+import Button from "../../components/Button"
 
 const Login = () => {
   const [username, setUsername] = useState("")
@@ -58,19 +59,27 @@ const Login = () => {
         <form className={styles.login_card} onSubmit={handleSubmit}>
           <p className={styles.login_subtitle}>Acesse sua conta e aproveite nossos serviços</p>
 
-          <div className={styles.input_card}>
+          <Input
+            type="text"
+            placeholder="Seu username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          >
             <i className="fa-solid fa-user"></i>
-            <input type="text" placeholder='Seu username' value={username} onChange={(e) => setUsername(e.target.value)} required />
-          </div>
+          </Input>
 
-          <div className={styles.input_card}>
+          <Input
+            type="password"
+            placeholder="Sua senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          >
             <i className="fa-solid fa-lock"></i>
-            <input type="password" placeholder='Sua senha' value={password} onChange={(e) => setPassword(e.target.value)} required />
-          </div>
+          </Input>
 
-          <ErrorMessage text={error} />
+          <Message text={error} type="error" />
 
-          <button className={styles.login_btn}>{isLoading ? <Loading size={"20px"} /> : "Entrar"}</button>
+          <Button text="Entrar" isLoading={isLoading} />
         </form>
 
         <p className={styles.credits}>empresa &reg;</p>

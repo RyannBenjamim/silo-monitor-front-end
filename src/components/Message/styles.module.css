@@ -1,0 +1,29 @@
+.success {
+  background-color: #4A8F4A;
+  width: 100%;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.error {
+  background-color: #B2433F;
+  width: 100%;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.neutral {
+  background-color: #7C6D44;
+  width: 100%;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}

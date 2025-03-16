@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  flex: 1 1 300px;
-  background-color: #ffffff;
+  flex: 1 1 400px;
+  background-color: #2E3238; /* Fundo escuro */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   padding: 20px;
   height: fit-content;
   cursor: pointer;
@@ -15,26 +15,35 @@
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #333;
+  color: #E0E0E0; /* Texto claro */
 }
 
-.temperature, .humidity, .status {
+.temperature, .humidity {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #555555;
+  color: #B0B0B0; /* Cinza claro */
 }
 
-.status span {
-  color: #333;
+.normal {
+  color: #B0B0B0;
 }
 
-.last_update {
+.warning {
+  color: #FFC107; /* Amarelo */
+}
+
+.danger {
+  color: #F44336; /* Vermelho */
+}
+
+.silo_id, .last_update {
   font-size: 0.9rem;
-  color: #777;
+  color: #999999; /* Cinza médio */
 }
+
