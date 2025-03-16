@@ -1,4 +1,4 @@
-main {
+.admin_main {
   background-color: #1E1E1E;
   width: 70%;
   margin-top: 20px;
@@ -11,7 +11,7 @@ main {
   padding: 20px;
 }
 
-main .main_title {
+.admin_main .main_title {
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.5px;
@@ -82,4 +82,23 @@ main .main_title {
 
 .input_card i {
   color: #1c1c1c;
+}
+
+@media (max-width: 1200px) {
+  .admin_main {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .admin_container {
+    flex-direction: column;
+  }
+
+  .admin_container form {
+    width: 100%;
+  }
+  
+  .admin_container .search {
+    width: 100%;
+  }
 }

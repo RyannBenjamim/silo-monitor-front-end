@@ -1,4 +1,4 @@
-main {
+.standard_main {
   background-color: #1E1E1E;
   width: 70%;
   margin-top: 20px;
@@ -11,7 +11,7 @@ main {
   padding: 20px;
 }
 
-main .main_title {
+.standard_main .main_title {
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.5px;
@@ -20,7 +20,7 @@ main .main_title {
   color: #E0E0E0;
 }
 
-main .silos_container {
+.standard_main .silos_container {
   width: 100%;
   height: fit-content;
   display: flex;
@@ -29,17 +29,17 @@ main .silos_container {
 }
 
 @media (max-width: 1500px) {
-  main {
+  .standard_main {
     flex-direction: column;
   }
 
-  main .silos_container {
+  .standard_main .silos_container {
     width: 100%;
   }  
 }
 
 @media (max-width: 700px) {
-  main {
+  .standard_main {
     width: 100%;
   }
 }

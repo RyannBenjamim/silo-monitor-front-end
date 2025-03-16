@@ -60,7 +60,7 @@ const AdminPainel = () => {
   }
 
   return (
-    <main>
+    <main className={styles.admin_main}>
       <p className={styles.main_title}>Painel de administrador</p>
       <div className={styles.admin_container}>
         <form onSubmit={handleSubmit}>
