@@ -31,18 +31,7 @@ const Home = () => {
     }
   };
 
-  const hasStoredUser = () => {
-    const stored_user = localStorage.getItem("stored_user")
-    return !!stored_user
-  }
-
   useEffect(() => {
-    const isLogged = hasStoredUser()
-    
-    if (!isLogged) {
-      navigate("/")
-    }
-
     fetchData()
   }, [])
 

@@ -68,7 +68,7 @@
   }
 
   .options {
-    gap: 10px;
+    gap: 15px;
   }
 
   .logo {
@@ -76,6 +76,7 @@
   }
 
   .username, .logout_btn {
+    gap: 6px;
     font-size: 13px;
   }
 
