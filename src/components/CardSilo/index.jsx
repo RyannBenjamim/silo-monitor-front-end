@@ -5,7 +5,7 @@ import useUseful from "../../js/useUseful"
 
 const CardSilo = ({ index, id }) => {
   const [register, setRegister] = useState(null)
-  const { getStoredUser } = useUseful()
+  const { getStoredUser, brasilFormatData } = useUseful()
 
   const getRegister = async () => {
     try {
@@ -53,7 +53,7 @@ const CardSilo = ({ index, id }) => {
         </span>
       </p>
       <p className={styles.silo_id}>id: {id}</p>
-      <p className={styles.last_update}>Última atualização: {register ? register.created_at : null}</p>
+      <p className={styles.last_update}>Última atualização: {register ? brasilFormatData(register.created_at) : null}</p>
     </div>
   )
 }

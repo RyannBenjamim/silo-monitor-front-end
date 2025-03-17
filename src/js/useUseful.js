@@ -3,18 +3,22 @@ import { useNavigate } from "react-router-dom"
 const useUseful = () => {
   const navigate = useNavigate()
 
-  const brasilFormatData = (data) => {
-    if (data === undefined) return "Indefinido"
+  const brasilFormatData = (data) => { 
+    if (data === undefined) return "Indefinido";
 
-    const dataObject = new Date(data)
-    let day = dataObject.getDate() + 1
-    let month = dataObject.getMonth() + 1
-    const year = dataObject.getFullYear()
+    const dataObject = new Date(data);
 
-    day = day < 10 ? "0" + day : day
-    month = month < 10 ? "0" + month : month
+    const options = { 
+        timeZone: "America/Sao_Paulo", 
+        day: "2-digit", 
+        month: "2-digit", 
+        year: "numeric", 
+        hour: "2-digit", 
+        minute: "2-digit", 
+        hour12: false 
+    };
 
-    return `${day}/${month}/${year}`
+    return new Intl.DateTimeFormat("pt-BR", options).format(dataObject).replace(",", "");
   }
 
   const getStoredUser = () => {
