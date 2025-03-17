@@ -93,7 +93,7 @@ const AdminPainel = () => {
         <div className={styles.search}>
           <Input
             type="text"
-            placeholder="Pesquisa por um username"
+            placeholder="Pesquisar por um username"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             onKeyDown={(e) => {
