@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styles from "./styles.module.css"
 import Message from "../Message"
 import axios from "axios"
@@ -30,6 +30,10 @@ const CardUser = ({ user }) => {
       console.log(error)
     }
   }
+
+  useEffect(() => {
+    setMessage(null)
+  }, [user])
 
   return (
     <div className={styles.user_card}>

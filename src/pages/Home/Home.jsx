@@ -27,7 +27,13 @@ const Home = () => {
       setUser(userResponse.data.data)
       setSilos(silosResponse.data.data)
     } catch (error) {
-      navigate("/")
+      if (error.response?.data?.message === "Token expirado.") {
+        alert("Sua sessão expirou, faça login novamente para acessar nossos serviços.");
+        localStorage.removeItem("stored_user");
+        navigate("/");
+      } else {
+        console.error("Erro ao buscar os dados:", error);
+      }
     }
   };
 
