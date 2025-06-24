@@ -12,7 +12,7 @@ const CardUser = ({ user }) => {
   const createNewSilo = async () => {
     try {
       const response = await axios.post("https://silo-monitor-api.vercel.app/silos", { "user_id": user.id }, { headers })
-      setMessage(`Silo criado com sucesso: ${response.data.data.id}`)
+      setMessage(`Sensor criado com sucesso: ${response.data.data.id}`)
     } catch (error) {
       console.log(error)
     }

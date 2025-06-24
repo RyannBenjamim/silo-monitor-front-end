@@ -1,11 +1,13 @@
 import styles from "./styles.module.css"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import axios from "axios"
 import useUseful from "../../js/useUseful"
+import { toast } from "react-toastify"
 
 const CardSilo = ({ index, id }) => {
   const [register, setRegister] = useState(null)
   const { getStoredUser, brasilFormatData } = useUseful()
+  const alertShownRef = useRef(false);
 
   const getRegister = async () => {
     try {
@@ -17,16 +19,34 @@ const CardSilo = ({ index, id }) => {
     }
   }
 
+  const verifyTemperature = (temperature) => {
+    if (temperature > 60) {
+      if (!alertShownRef.current) {
+        toast.warn(`Temperatura elevada no sensor ${index + 1}`, {
+          style: {
+            background: '#181818',
+            color: 'white',
+          },
+          autoClose: false,
+          closeOnClick: true,
+        });
+        alertShownRef.current = true
+      }
+    } else {
+      alertShownRef.current = false
+    }
+  }
+
   const temperatureStatus = (temperature) => {
-    if (temperature <= 25) return styles.normal;
-    if (temperature > 25 && temperature <= 30) return styles.warning;
-    return styles.danger;
+    if (temperature <= 50) return styles.normal
+    if (temperature > 50 && temperature <= 60) return styles.warning
+    return styles.danger
   }
 
   const humidityStatus = (humidity) => {
-    if (humidity <= 70) return styles.normal;
-    if (humidity > 70 && humidity <= 80) return styles.warning;
-    return styles.danger;
+    if (humidity >= 40) return styles.normal
+    if (humidity >= 20 && humidity < 40) return styles.warning
+    return styles.danger
   }
 
   useEffect(() => {
@@ -38,6 +58,10 @@ const CardSilo = ({ index, id }) => {
 
     return () => clearInterval(interval)
   }, [])
+
+  useEffect(() => {
+    verifyTemperature(register?.temperature)
+  }, [register])
 
   return (
     <div className={styles.card}>
