@@ -1,5 +1,5 @@
 import styles from "./styles.module.css"
-import CardSilo from "../../components/CardSilo"
+import Card from "../../components/Card"
 
 const StandardPainel = ({ silos }) => {
   return (
@@ -7,7 +7,7 @@ const StandardPainel = ({ silos }) => {
       <p className={styles.main_title}>Dashboard de gerenciamento</p>
       <div className={styles.silos_container}>
         {silos.map((silo, index) => (
-          <CardSilo key={silo.id} index={index} id={silo.id} />
+          <Card key={silo.id} index={index} id={silo.id} />
         ))}
       </div>
     </main>

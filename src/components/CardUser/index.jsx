@@ -40,7 +40,7 @@ const CardUser = ({ user }) => {
       <p className={styles.id}>id: {user.id}</p>
       <p className={styles.title}>{user.username}</p>
       <div className={styles.btns}>
-        <button className={styles.create_silo} onClick={createNewSilo}>Criar novo silo</button>
+        <button className={styles.create_silo} onClick={createNewSilo}>Criar novo sensor</button>
         <button className={styles.delete_user} onClick={deleteUser}>Deletar usuário</button>
       </div>
 

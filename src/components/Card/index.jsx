@@ -41,7 +41,7 @@ const CardSilo = ({ index, id }) => {
 
   return (
     <div className={styles.card}>
-      <p className={styles.title}>Silo {index + 1}</p>
+      <p className={styles.title}>Sensor {index + 1}</p>
       <p className={styles.temperature}>Temperatura atual: 
         <span className={`${register ? temperatureStatus(register.temperature) : styles.normal}`}>
           {` ${register ? `${register.temperature}°C` : "inativo"}`}
